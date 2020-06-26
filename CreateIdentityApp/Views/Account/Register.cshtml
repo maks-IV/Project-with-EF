@@ -1,0 +1,31 @@
+﻿@model CreateIdentityApp.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+<h2>Registration of new user</h2>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="YearBirth"></label><br />
+        <input asp-for="YearBirth" />
+        <span asp-validation-for="YearBirth"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label><br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="PasswordConfirm"></label><br />
+        <input asp-for="PasswordConfirm" />
+        <span asp-validation-for="PasswordConfirm"></span>
+    </div>
+    <div>
+        <input type="submit" value="Регистрация" />
+    </div>
+</form>
