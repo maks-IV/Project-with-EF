@@ -18,6 +18,7 @@
             <td>
                 <form method="post" asp-action="Delete" asp-controller="Users" asp-route-id="@user.Id">
                     <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                    <a class="btn btn-sm btn-primary" asp-action="ChangePassword" asp-route-id="@user.Id">Change password</a>
                     <button type="submit" class="btn btn-sm btn-danger">
                         Delete
                     </button>
