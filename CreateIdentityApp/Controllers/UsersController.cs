@@ -26,6 +26,7 @@ namespace CreateIdentityApp.Controllers
             {
                 User user = new User { UserName = model.Email, Email = model.Email, YearBirth = model.YearBirth };
                 var result = await _userManager.CreateAsync(user,model.Password);
+                await _userManager.AddToRoleAsync(user, "user"); //?
                 if(result.Succeeded)
                 {
                     return RedirectToAction("Index");
