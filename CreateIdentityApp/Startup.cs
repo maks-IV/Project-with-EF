@@ -34,7 +34,8 @@ namespace CreateIdentityApp
                 opts.Password.RequireDigit = true;
                 opts.User.RequireUniqueEmail = true;
             })
-                .AddEntityFrameworkStores<ApplicationContext>();
+                .AddEntityFrameworkStores<ApplicationContext>()
+                .AddDefaultTokenProviders();
 
             services.AddControllersWithViews();
         }
